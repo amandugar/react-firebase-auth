@@ -8,6 +8,7 @@ const PasswordResetView = ({ handlePasswordReset, emailRef, error }) => {
   return (
     <div className="flex w-full flex-col h-full items-center justify-center">
       <Form handler={handlePasswordReset}>
+        <Error>{error}</Error>
         <Input
           reference={emailRef}
           placeholder={"Email"}
@@ -16,7 +17,6 @@ const PasswordResetView = ({ handlePasswordReset, emailRef, error }) => {
         />
         <SubmitButton>Reset Password</SubmitButton>
         <Links path={"/"}>Home</Links>
-        <p>{error}</p>
       </Form>
     </div>
   )

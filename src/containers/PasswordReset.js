@@ -19,11 +19,9 @@ const PasswordReset = () => {
     passwordReset(email)
       .then(msg => {
         setMessage("Password reset email sent to: " + email)
-        console.log(msg)
       })
       .catch(error => {
         setError(error.message)
-        console.log("yes")
       })
   }
 

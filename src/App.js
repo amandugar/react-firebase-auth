@@ -1,9 +1,7 @@
-function App() {
-  return (
-    <div className="App">
-      Hello World
-    </div>
-  );
+import RouterComp from "./Router/Router"
+
+const App = () => {
+  return <RouterComp />
 }
 
-export default App;
+export default App

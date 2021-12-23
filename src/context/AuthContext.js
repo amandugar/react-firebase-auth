@@ -34,8 +34,6 @@ export const AuthProvider = ({ children }) => {
         setCurrentUser(ref.user)
       })
       .catch(error => {
-        console.log(error)
-
         throw error
       })
     return promise
@@ -44,11 +42,9 @@ export const AuthProvider = ({ children }) => {
   const signin = async (email, password) => {
     let promise = await signInWithEmailAndPassword(auth, email, password)
       .then(data => {
-        console.log(data)
         setCurrentUser(data.user)
       })
       .catch(error => {
-        console.log(error)
         throw error
       })
     return promise
@@ -60,8 +56,6 @@ export const AuthProvider = ({ children }) => {
         console.log("Email sent to " + email)
       })
       .catch(error => {
-        console.log(error)
-
         throw error
       })
     return promise
